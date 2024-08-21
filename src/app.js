@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const authRoutes = require('./routes/authRoutes'); 
 const healthRoutes = require('./routes/healthRoutes');
 const userDataRoutes = require('./routes/userDataRoutes');
+const projectDataRoutes = require('./routes/projectDataRoutes');
 const cors = require('cors');
 
 // Load environment variables from .env file
@@ -27,6 +28,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userDataRoutes);
+app.use('/api/project', projectDataRoutes);
 app.use('/api/health', healthRoutes);
 
 // Start the server
